@@ -14,7 +14,11 @@ HTMLWidgets.widget({
 
   renderValue: function(el, x, instance) {
 
-    el.innerText = x.message;
+    anigif.initOnce();
+    anigif.options.selector = "body";
+    anigif.options.base_url = "./lib/gifw00t-0.0.1/"
+    anigif.init();
+    anigif_bar.install();
 
   },
 

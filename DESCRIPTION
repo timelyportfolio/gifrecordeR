@@ -8,5 +8,7 @@ License: MIT + file LICENSE
 LazyData: true
 URL: https://github.com/timelyportfolio/gifrecordeR
 BugReports: https://github.com/timelyportfolio/gifrecordeR/issues
+Depends:
+  htmltools
 Suggests: 
-    testthat
+  testthat

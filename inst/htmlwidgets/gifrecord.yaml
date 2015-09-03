@@ -2,4 +2,5 @@ dependencies:
   - name: gifw00t
     version: 0.0.1
     src: htmlwidgets/lib/gifw00t
-    script: anigif.js
+    script: [anigif.js, jsgif/worker.js, jsgif/GIFEncoder.js, jsgif/LZWEncoder.js, jsgif/NeuQuant.js, jsgif/Demos/b64.js]
+    stylesheet: anigif.css
