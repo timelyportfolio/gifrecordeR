@@ -1,0 +1,12 @@
+Package: gifrecordeR
+Title: gifrecordeR
+Version: 0.0.1
+Author: Kenton Russell
+Maintainer: Kenton Russell <kent.russell@timelyportfolio.com>
+Description: Easily record animated GIFs of your web session straight from R with this htmlwidget wrapper for \href{https://github.com/yaronn/gifw00t/}{gifw00t}.
+License: MIT + file LICENSE
+LazyData: true
+URL: https://github.com/timelyportfolio/gifrecordeR
+BugReports: https://github.com/timelyportfolio/gifrecordeR/issues
+Suggests: 
+    testthat
