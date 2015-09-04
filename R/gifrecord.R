@@ -1,17 +1,25 @@
-#' Add a GIF Recorder
+#' Add a GIF Recorder to Browser, Viewer, Shiny
 #'
 #' Record animated GIFs of your browser, RStudio viewer, or
 #'  Shiny app with the convenient infrastructure of an
 #'  htmlwidget thanks to \href{https://github.com/yaronn/gifw00t/}{gifw00t}.
+#'  
+#' @param CSS selector of the element to record.  By default,
+#'          \code{body} is applied, which will also record
+#'          the GIF recorder toolbar.  Providing a \code{id} selector
+#'          is strongly encouraged.  Note, this can be changed later
+#'          with the settings button on the GIF recorder toolbar.
 #'
 #' @import htmlwidgets
 #'
 #' @export
-gifrecord <- function(message) {
+gifrecord <- function( selector = 'body' ) {
 
   # forward options using x
   x = list(
-    message = message
+    options = list(
+      selector = selector
+    )
   )
 
   # create widget
@@ -57,7 +65,7 @@ gifrecord_html <- function(id, style, class, ...){
   htmltools::tagList(
     htmltools::tags$div(
       id = id, class = class, style = style, 
-      style= "position: fixed; right: 5%; top = 5%; zIndex: 99999;",
+      style= "position: fixed; right: 5%; top: 5%; z-index: 99999;",
       htmltools::tags$div(
         id = "anigif_wrapper",
         htmltools::HTML('
