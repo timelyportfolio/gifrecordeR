@@ -50,5 +50,5 @@ License
 -   [gifw00t](https://github.com/yaronn/gifw00t) - **GPL V3** thanks
     [@YaronNaveh](<http://twitter.com/>\#!/YaronNaveh)
 
--   'gifrecordeR\` - MIT + file LICENSE Â© [Kenton
+-   `gifrecordeR` -  MIT + file LICENSE © [Kenton
     Russell](https://github.com/).
