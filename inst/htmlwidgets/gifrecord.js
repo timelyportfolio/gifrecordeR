@@ -23,8 +23,8 @@ HTMLWidgets.widget({
     
 
     anigif.initOnce();
-    anigif.options.selector = "body";
-    anigif.options.base_url = "./lib/gifw00t-0.0.1/"
+    anigif.options.selector = x.options.selector;
+    anigif.options.base_url = "./lib/gifw00t-0.0.1/";
     anigif.init();
     anigif_bar.install();
 
