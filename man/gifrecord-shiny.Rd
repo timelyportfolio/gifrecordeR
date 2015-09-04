@@ -6,7 +6,7 @@
 \alias{renderGifrecord}
 \title{Shiny bindings for gifrecord}
 \usage{
-gifrecordOutput(outputId, width = "100\%", height = "400px")
+gifrecordOutput(outputId, width = "260px", height = "2.5em")
 
 renderGifrecord(expr, env = parent.frame(), quoted = FALSE)
 }

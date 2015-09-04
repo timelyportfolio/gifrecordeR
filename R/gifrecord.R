@@ -1,11 +1,13 @@
-#' <Add Title>
+#' Add a GIF Recorder
 #'
-#' <Add Description>
+#' Record animated GIFs of your browser, RStudio viewer, or
+#'  Shiny app with the convenient infrastructure of an
+#'  htmlwidget thanks to \href{https://github.com/yaronn/gifw00t/}{gifw00t}.
 #'
 #' @import htmlwidgets
 #'
 #' @export
-gifrecord <- function(message, width = NULL, height = NULL) {
+gifrecord <- function(message) {
 
   # forward options using x
   x = list(
@@ -16,8 +18,8 @@ gifrecord <- function(message, width = NULL, height = NULL) {
   htmlwidgets::createWidget(
     name = 'gifrecord',
     x,
-    width = width,
-    height = height,
+    width = '260px',
+    height = '2.5em',
     package = 'gifrecordeR'
   )
 }
@@ -39,15 +41,15 @@ gifrecord <- function(message, width = NULL, height = NULL) {
 #' @name gifrecord-shiny
 #'
 #' @export
-gifrecordOutput <- function(outputId, width = '100%', height = '400px'){
-  shinyWidgetOutput(outputId, 'gifrecord', width, height, package = 'gifrecordeR')
+gifrecordOutput <- function(outputId, width = '260px', height = '2.5em'){
+  htmlwidgets::shinyWidgetOutput(outputId, 'gifrecord', width, height, package = 'gifrecordeR')
 }
 
 #' @rdname gifrecord-shiny
 #' @export
 renderGifrecord <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
-  shinyRenderWidget(expr, gifrecordOutput, env, quoted = TRUE)
+  htmlwidgets::shinyRenderWidget(expr, gifrecordOutput, env, quoted = TRUE)
 }
 
 
@@ -55,7 +57,7 @@ gifrecord_html <- function(id, style, class, ...){
   htmltools::tagList(
     htmltools::tags$div(
       id = id, class = class, style = style, 
-      style= "position: fixed; right: '5%'; top = '5%'; zIndex: 99999;",
+      style= "position: fixed; right: 5%; top = 5%; zIndex: 99999;",
       htmltools::tags$div(
         id = "anigif_wrapper",
         htmltools::HTML('

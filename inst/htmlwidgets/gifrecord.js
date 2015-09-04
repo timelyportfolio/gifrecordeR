@@ -6,13 +6,21 @@ HTMLWidgets.widget({
 
   initialize: function(el, width, height) {
 
-    return {
-      // TODO: add instance fields as required
-    }
+    return { };
 
   },
 
   renderValue: function(el, x, instance) {
+    
+    // remove position:relative if standalone which
+    //   gives us an parentNode with id = "htmlwidget_container"
+    if(el.parentNode.id === "htmlwidget_container"){
+      var st = el.parentNode.style;
+      st.position = "inherit";
+      st.width = '260px';
+      st.height = '2.5em';
+    }
+    
 
     anigif.initOnce();
     anigif.options.selector = "body";

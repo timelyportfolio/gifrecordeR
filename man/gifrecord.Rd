@@ -2,11 +2,13 @@
 % Please edit documentation in R/gifrecord.R
 \name{gifrecord}
 \alias{gifrecord}
-\title{<Add Title>}
+\title{Add a GIF Recorder}
 \usage{
-gifrecord(message, width = NULL, height = NULL)
+gifrecord(message)
 }
 \description{
-<Add Description>
+Record animated GIFs of your browser, RStudio viewer, or
+ Shiny app with the convenient infrastructure of an
+ htmlwidget thanks to \href{https://github.com/yaronn/gifw00t/}{gifw00t}.
 }
 
