@@ -1,26 +1,54 @@
-
-# gifrecordeR
+gifrecordeR
+===========
 
 > gifrecordeR
 
 [![](http://www.r-pkg.org/badges/version/gifrecordeR)](http://www.r-pkg.org/pkg/gifrecordeR)
-[![CRAN RStudio mirror downloads](http://cranlogs.r-pkg.org/badges/gifrecordeR)](http://www.r-pkg.org/pkg/gifrecordeR)
+[![CRAN RStudio mirror
+downloads](http://cranlogs.r-pkg.org/badges/gifrecordeR)](http://www.r-pkg.org/pkg/gifrecordeR)
 
+Easily record animated GIFs of your `R` web session straight client side
+with this `htmlwidget wrapper` for
+[gifw00t](https://github.com/yaronn/gifw00t). Use it for documentation,
+illustration, or fun.
 
-Easily record animated GIFs of your web session straight from R with this htmlwidget wrapper for \href{https://github.com/yaronn/gifw00t/}{gifw00t}.
+Installation
+------------
 
-## Installation
+    devtools::install_github("/gifrecordeR")
 
-```r
-devtools::install_github("/gifrecordeR")
-```
+Usage
+-----
 
-## Usage
+    library(gifrecordeR)
+    library(htmltools)
 
-```r
-library(gifrecordeR)
-```
+    browsable(
+      tagList(list(
+        tags$div(
+          id = "div_record",
+          style = "width: 400px; height: 400px;",
+          tags$h2(
+            contentEditable = "true",
+            "Recording Live ... (I'm editable)"
+          ),
+          tags$p(
+            contentEditable = "true",
+            "Feel free to change me.  Careful though it might be
+            recorded in a GIF."
+          )
+        ),
+        gifrecord("#div_record")
+      ))
+    )
 
-## License
+![gif recording of example 1](example1.gif)
 
-MIT + file LICENSE © [Kenton Russell](https://github.com/).
+License
+-------
+
+-   [gifw00t](https://github.com/yaronn/gifw00t) - **GPL V3** thanks
+    [@YaronNaveh](<http://twitter.com/>\#!/YaronNaveh)
+
+-   'gifrecordeR\` - MIT + file LICENSE Â© [Kenton
+    Russell](https://github.com/).

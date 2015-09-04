@@ -2,9 +2,16 @@
 % Please edit documentation in R/gifrecord.R
 \name{gifrecord}
 \alias{gifrecord}
-\title{Add a GIF Recorder}
+\title{Add a GIF Recorder to Browser, Viewer, Shiny}
 \usage{
-gifrecord(message)
+gifrecord(selector = "body")
+}
+\arguments{
+\item{CSS}{selector of the element to record.  By default,
+         \code{body} is applied, which will also record
+         the GIF recorder toolbar.  Providing a \code{id} selector
+         is strongly encouraged.  Note, this can be changed later
+         with the settings button on the GIF recorder toolbar.}
 }
 \description{
 Record animated GIFs of your browser, RStudio viewer, or
