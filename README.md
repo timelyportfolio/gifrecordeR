@@ -12,10 +12,16 @@ with this `htmlwidget wrapper` for
 [gifw00t](https://github.com/yaronn/gifw00t). Use it for documentation,
 illustration, or fun.
 
+Thanks to all the code and amazing examples from [Yaron Naveh
+@yaronn](https://twitter.com/YaronNaveh). See his other unbelievable
+work, such as the \>6,000 star
+[blessed-contrib](https://github.com/yaronn/blessed-contrib) He deserves
+all the credit and praise for this. I simply the `htmlwidget` wrapper.
+
 Installation
 ------------
 
-    devtools::install_github("/gifrecordeR")
+    devtools::install_github("timelyportfolio/gifrecordeR")
 
 Usage
 -----
@@ -48,7 +54,7 @@ License
 -------
 
 -   [gifw00t](https://github.com/yaronn/gifw00t) - **GPL V3** thanks
-    [@YaronNaveh](<http://twitter.com/>\#!/YaronNaveh)
+    [@YaronNaveh][http://twitter.com/YaronNaveh)
 
--   `gifrecordeR` -  MIT + file LICENSE © [Kenton
+-   'gifrecordeR\` - MIT + file LICENSE Â© [Kenton
     Russell](https://github.com/).
