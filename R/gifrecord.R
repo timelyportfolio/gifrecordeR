@@ -63,19 +63,19 @@ gifrecord_html <- function(id, style, class, ...){
 
 
 <div>
-<img id="record" src="img/record.png" />
+<img id="record" src="./lib/gifw00t-0.0.1/img/record.png" />
 </div>
 
 <div>
-<img id="stop" src="img/stop.png" />
+<img id="stop" src="./lib/gifw00t-0.0.1/img/stop.png" />
 </div>
 
 <div>
-<img id="play" src="img/play.png" />
+<img id="play" src="./lib/gifw00t-0.0.1/img/play.png" />
 </div>
 
 <div>
-<img id="config" src="img/config.png" />
+<img id="config" src="./lib/gifw00t-0.0.1/img/config.png" />
 </div>
 
 <div id="status" style="margin-top: 0px; margin-left: 5px;">
