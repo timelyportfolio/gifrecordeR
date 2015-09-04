@@ -4,3 +4,11 @@ dependencies:
     src: htmlwidgets/lib/gifw00t
     script: anigif.js
     stylesheet: anigif.css
+  - name: canvg
+    version: 1.0.0
+    src: htmlwidgets/lib/canvg
+    script: [rgbcolor.js, canvg.js]    
+  - name: svgcanvas
+    version: 0.0.1
+    src: htmlwidgets/lib/svgcanvas
+    script: svgcanvas.js
