@@ -10,7 +10,9 @@ downloads](http://cranlogs.r-pkg.org/badges/gifrecordeR)](http://www.r-pkg.org/p
 Easily record animated GIFs of your `R` web session straight client side
 with this `htmlwidget wrapper` for
 [gifw00t](https://github.com/yaronn/gifw00t). Use it for documentation,
-illustration, or fun.
+illustration, or fun. **SVG support is weak/nonexistent currently, but I
+am working on it here at this
+[branch](https://github.com/timelyportfolio/).**
 
 Thanks to all the code and amazing examples from [Yaron Naveh
 @yaronn](https://twitter.com/YaronNaveh). See his other unbelievable
@@ -50,6 +52,26 @@ Usage
     )
 
 ![gif recording of example 1](example1.gif)
+
+In this next example, we record interaction with a
+[`rbokeh`](https://github.com/bokeh/rbokeh) plot. I intentionally left
+the selector as the default `body`, so you can see what it looks like on
+screen.
+
+    library(gifrecordeR)
+    library(rbokeh)
+    library(htmltools)
+
+    browsable(
+      tagList(
+        list(
+          figure()%>% ly_points(1:10),
+          gifrecord()
+        )
+      )
+    )
+
+![gif recording of bokeh example](example2_rbokeh.gif)
 
 License
 -------
