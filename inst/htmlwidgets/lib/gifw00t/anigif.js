@@ -97,7 +97,6 @@ GIFEncoder_WebWorker = function(options) {
     }
         
     var finish_async = exports.finish_async = function finish_async(opt) {
-        debugger;
         var self = this
         var url = self.base_url + 'worker.js';
         downloadString(self.base_url + 'worker.js', function(err, content) {
@@ -795,8 +794,14 @@ window.anigif_bar = {
         },
         
         play: function(el) {
-            var win=window.open(window.anigif.img, '_blank');
+          //window.open(window.anigif.img, '_self')
+          // if in rstudio don't open new window
+          if(navigator.userAgent.search("rstudio") == -1){                      var win=window.open(window.anigif.img, '_blank');
             win.focus();
+          } else {
+            downloadFile(window.anigif.img);
+          }
+          
         },
         
         setEnabled: function(settings) {

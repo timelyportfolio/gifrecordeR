@@ -1,6 +1,5 @@
 var base_url = typeof(base_url_injected)=="undefined"?"":base_url_injected;
 
-debugger;
 importScripts(base_url + 'GIFEncoder.js', base_url + 'LZWEncoder.js', base_url + 'NeuQuant.js', base_url + 'Demos/b64.js')
 
 onmessage = function (evt) {
