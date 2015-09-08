@@ -337,10 +337,8 @@ WorkCrew.prototype.clean = function() {
                         })
            }
            else
-           debugger;
             window.html2canvas( [ self.el ], {
                     onrendered: function(canvas) {
-                      debugger;
                         self.resizeImage(canvas, self.options.ratio, function(err, canvas_small) {
                             cba(null, canvas_small);    
                         })
